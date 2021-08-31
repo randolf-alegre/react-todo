@@ -9,10 +9,16 @@ export default function Todo() {
     setTodos([...todos, data]);
   };
 
+  const deleteTodo = (index) => {
+    const list = [...todos];
+    list.splice(index, 1);
+    setTodos([...list]);
+  };
+
   return (
     <div>
       <AddTodo addTodo={addToDo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function AddTodo(props) {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     props.addTodo(todo);
-    e.currentTarget.value = "";
+    setTodo("");
   };
 
   return (
